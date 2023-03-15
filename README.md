@@ -51,12 +51,17 @@ MegaNeRF
 ```
 python gp_nerf/train.py --config_file configs/${DATASET_NAME}.yml --exp_name $EXP_PATH --dataset_path $DATASET_PATH --chunk_paths $CHUNK_PATH
 ```
-At the first time of running, it takes some times to write the chunk into the disk.
+![图片](https://user-images.githubusercontent.com/57701854/225179843-f0db4f60-c725-4752-9e9a-491a75e9a40e.png)
+
+At the first time of running, it takes some times to write the chunk into the disk.第一次没有chunk_path,需要加上--dataset_type filesystem参数，然后给定一个chunk的新路径
 ## Evaluation
 
 ```
 python gp_nerf/eval.py --config_file configs/${DATASET_NAME}.yaml  --exp_name $EXP_NAME --dataset_path $DATASET_PATH  --ckpt_path  $ckpt_path
 ```
+![图片](https://user-images.githubusercontent.com/57701854/225179690-be67714b-12b8-4f2a-9e81-12e0e30a16be.png)
+
+
 
 
 ## Acknowledgements
